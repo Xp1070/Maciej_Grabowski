@@ -18,33 +18,50 @@ header{
     height: 21%;
     width: 100%;
     margin: 0;
-    background-color: aquamarine;
+    background-image: url(foto/mapa_tlo.jpg);
+    background-size: cover;
+    background-attachment: fixed;
     text-align: center;
     font-size: 70px;
     align-content: center;
+    animation-name: title_color;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+@keyframes title_color{
+    0%, 50%, 100%{
+        color: white;
+    }
+    25%, 75%{
+        color: black;
+    }
 }
 nav.top{
     height: 5%;
     width: 100%;
     margin: 0;
     padding: 0;
-    background-color: bisque;
 }
 nav.top a{
     display: block;
     width: 12.5%;
     height: 100%;
-    background-color: white;
+    background-color: #beaf93;
+    color: black;
     margin: 0;
     float: left;
     text-align: center;
     align-content: center;
+    transition: 0.3s;
+}
+nav.top a:hover{
+    background-color: #927b66;
+    color: white;
 }
 nav.side{
     position: fixed;
     height: 18%;
     width: 8%;
-    background-color: aqua;
     margin: 1%;
 }
 nav.side a{
@@ -53,13 +70,20 @@ nav.side a{
     height: 25%;
     text-align: center;
     align-content: center;
+    background-color: #e6dcc0;
+    color: black;
+    transition: 0.3s;
+}
+nav.side a:hover{
+    background-color: #927b66;
+    color: white
 }
 main{
     color: white;
     height: auto;
     width: 70%;
     margin: 0;
-    background-color: black;
+    background-color: #586258;
     padding-left: 15%;
     padding-right: 15%;
     padding-bottom: 5%;
@@ -68,8 +92,9 @@ footer{
     height: 5%;
     width: 100%;
     margin: 0;
-    background-color: blueviolet;
+    background-color: #787261;
     text-align: center;
+    align-content: center;
     position: fixed;
     bottom: 0;
 }
