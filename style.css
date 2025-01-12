@@ -8,25 +8,31 @@ body, html{
 }
 p{
     margin: 0;
+    font-size: 19px;
 }
 .title{
     font-size: 50px;
     text-align: center;
     padding: 10px;
+    text-decoration: underline;
 }
 header{
     height: 21%;
     width: 100%;
     margin: 0;
     background-image: url(foto/mapa_tlo.jpg);
-    background-size: cover;
     background-attachment: fixed;
+    background-position: center;
     text-align: center;
     font-size: 70px;
     align-content: center;
     animation-name: title_color;
     animation-duration: 10s;
     animation-iteration-count: infinite;
+}
+header p{
+    margin: 0;
+    font-size: 22px;
 }
 @keyframes title_color{
     0%, 50%, 100%{
@@ -44,7 +50,7 @@ nav.top{
 }
 nav.top a{
     display: block;
-    width: 12.5%;
+    width: 25%;
     height: 100%;
     background-color: #beaf93;
     color: black;
@@ -53,6 +59,12 @@ nav.top a{
     text-align: center;
     align-content: center;
     transition: 0.3s;
+}
+nav.top.resp{
+    display: block;
+}
+nav.top a.resp{
+    display: none;
 }
 nav.top a:hover{
     background-color: #927b66;
@@ -63,11 +75,12 @@ nav.side{
     height: 18%;
     width: 8%;
     margin: 1%;
+    display: none;
 }
 nav.side a{
     display: block;
     width: 100%;
-    height: 25%;
+    height: 20%;
     text-align: center;
     align-content: center;
     background-color: #e6dcc0;
@@ -81,12 +94,30 @@ nav.side a:hover{
 main{
     color: white;
     height: auto;
-    width: 70%;
+    width: 90%;
     margin: 0;
     background-color: #586258;
-    padding-left: 15%;
-    padding-right: 15%;
+    padding-left: 5%;
+    padding-right: 5%;
     padding-bottom: 5%;
+}
+table{
+    margin-left: auto;
+    margin-right: auto;
+}
+p.title2{
+    font-size: 25px;
+    margin: 2px;
+}
+#mapa{
+    border: none;
+    width: 100%;
+    height: 400px;
+}
+#film{
+    border: none;
+    width: 100%;
+    height: 250px;
 }
 footer{
     height: 5%;
@@ -95,6 +126,123 @@ footer{
     background-color: #787261;
     text-align: center;
     align-content: center;
-    position: fixed;
+    position: relative;
     bottom: 0;
+}
+table{
+    color: black;
+    background-color: #e5ceaa;
+    border-width: 3px;
+    border-color:#282b28;
+    border-style: solid;
+}
+td{
+    border-width: 1px;
+    border-color:#282b28;
+    border-style: solid;
+}
+.logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 15%;
+}
+.center{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+    margin-top: 20px;
+}
+.column {
+    float: left;
+    width: 25%;
+}
+.column img {
+    opacity: 0.8;
+    cursor: pointer;
+}
+  
+.column img:hover {
+    opacity: 1;
+}
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.container {
+    position: relative;
+    display: none;
+}
+.closebtn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    color: white;
+    font-size: 35px;
+    cursor: pointer;
+}
+.small{
+    width: 100%;
+}
+@media only screen and (min-width: 600px){
+    header{
+        background-image: url(foto/mapa_tlo.jpg);
+        background-size: cover;
+        background-attachment: fixed;
+    }
+    nav.side{
+        display: block;
+    }
+    nav.top{
+        height: 5%;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    nav.top a{
+        display: block;
+        width: 12.5%;
+        height: 100%;
+        background-color: #beaf93;
+        color: black;
+        margin: 0;
+        float: left;
+        text-align: center;
+        align-content: center;
+        transition: 0.3s;
+    }
+    nav.top.resp{
+        display: none;
+    }
+    nav.top a.resp{
+        display: block;
+    }
+    #mapa{
+        height: 600px;
+    }
+    #film{
+        height: 350px;
+    }
+    main{
+        width: 80%;
+        padding-left: 10%;
+        padding-right: 10%;
+        padding-bottom: 5%;
+    }
+}
+@media only screen and (min-width: 1200px){
+    #film{
+        height: 550px;
+    }
+    main{
+        width: 70%;
+        padding-left: 15%;
+        padding-right: 15%;
+        padding-bottom: 5%;
+    }
+    footer{
+        position: fixed;
+    }
 }
